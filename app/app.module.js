@@ -2,8 +2,7 @@
   angular
     .module('app', [
       'ngRoute',
-      'movieSearchModule',
-      'movieModule'
+      'movieSearchModule'
     ])
     .config(routeConfig);
     

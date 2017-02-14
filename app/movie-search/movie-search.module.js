@@ -7,8 +7,12 @@
     function routeConfig($routeProvider) {
       $routeProvider
         .when('/search', {
-          templateUrl: './movie-search/movie-search.html',
+          templateUrl: './movie-search/search-list/movie-search.html',
           controller: 'movieSearchCtrl'
-        });
+        })
+        .when('/search/:id', {
+        templateUrl: './movie-search/movie-detail/movie-detail.html',
+        controller: 'movieDetailCtrl'
+      });
     }
 })();

@@ -11,11 +11,11 @@
             name="movieYear" 
             ng-model="movieYear"/>
   </span>
-  <span>
+  <!--<span>
     <input type="checkbox"
            ng-model="isFullPlot">
     Full plot
-  </span>
+  </span>-->
   <button type="button"
           ng-click="findMovie()">
     Search        
@@ -26,10 +26,10 @@
 </section>
 
 <section class="filmwep__search-results">
-  <a movie-search
+  <article movie-search
      class="filmwep__movie-tile" 
      ng-repeat="movie in movieList" 
      movie="movie"
-     ng-href="#!movie/tt0076759">
-  </a>
+     ng-click="navigateToMovie(movie.imdbID)">
+  </article>
 </section>
