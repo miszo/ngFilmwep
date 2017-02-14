@@ -1,0 +1,33 @@
+.filmwep__movie-tile {
+  margin: 1%;
+  width: 23%;
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+.filmwep__movie-tile-poster {
+  display: inline-block;
+  height: 40rem;
+  margin: 0;
+  width: 100%;
+  background: center center/cover no-repeat;
+}
+
+.filmwep__movie-tile-title {
+  margin: 3%;
+  display: flex;
+  flex-flow: column;
+}
+
+.filmwep__movie-title {
+  font-size: 2rem;
+  min-height: 6rem;
+  color: #2196F3;
+}
+
+.filmwep__movie-year {
+  font-size: 1.2rem;
+}

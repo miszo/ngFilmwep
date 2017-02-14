@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext';
+@import './css/_reset.css';
+@import './movie-search/movieSearchDirective/movie-search.directive.css';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+main {
+  margin: 0 5%;
+}
+
+header {
+  margin: 2% 5%;
+}
+h1 {
+  font-size: 3.6rem;
+}
+
+input {
+  font: inherit;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.filmwep__searcher {
+  padding: 5rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+} 
+
+.filmwep__search-results {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem 1%;
+}
+
+

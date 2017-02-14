@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ngFilmwep</title>  
+</head>
+<link rel="stylesheet" href="./app.style.css">
+<body ng-controller="filmwepCtrl">
+  <header>
+    <h1>ngFilmwep</h1>
+    <nav>
+      <a href="#!">Home</a>
+      <a href="#!search">Search</a>
+    </nav>
+  </header>
+  
+  
+  <main ng-view></main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+  
+  <script src="./app.module.js"></script>
+  <script src="./app.controller.js"></script>
+
+  <script src="./movie-search/movie-search.module.js"></script>
+  <script src="./movie-search/movie-search.service.js"></script>
+  <script src="./movie-search/movie-search.controller.js"></script>
+  
+  <script src="./movie-search/movieSearchDirective/movie-search.directive.js"></script>
+
+  <script src="./movie/movie.module.js"></script>
+  <script src="./movie/movie.controller.js"></script>
+
+</body>
+</html>

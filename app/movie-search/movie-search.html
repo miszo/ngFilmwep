@@ -1,0 +1,35 @@
+<section class="filmwep__searcher">
+  <span>
+    * Movie title:
+    <input type="text" 
+            name="movieTitle" 
+            ng-model="movieTitle"/>
+  </span>
+  <span>
+    Movie year:
+    <input type="number"
+            name="movieYear" 
+            ng-model="movieYear"/>
+  </span>
+  <span>
+    <input type="checkbox"
+           ng-model="isFullPlot">
+    Full plot
+  </span>
+  <button type="button"
+          ng-click="findMovie()">
+    Search        
+  </button>
+  <button type="button">
+    Clear        
+  </button>
+</section>
+
+<section class="filmwep__search-results">
+  <a movie-search
+     class="filmwep__movie-tile" 
+     ng-repeat="movie in movieList" 
+     movie="movie"
+     ng-href="#!movie/tt0076759">
+  </a>
+</section>
