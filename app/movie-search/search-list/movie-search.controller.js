@@ -3,8 +3,8 @@
     .module('movieSearchModule')
     .controller('movieSearchCtrl', movieSearchCtrl);
 
-  movieSearchCtrl.$inject = ['$scope', '$location', 'movieSearchService'];
-  function movieSearchCtrl($scope, $location, movieSearchService) {
+  movieSearchCtrl.$inject = ['$scope', '$location', 'toastr', 'movieSearchService'];
+  function movieSearchCtrl($scope, $location, toastr, movieSearchService) {
     $scope.movieTitle = null;
     $scope.movieYear = null;
     $scope.movieList = [];
@@ -21,8 +21,8 @@
           $scope.movieList = response.data.Search;
         })
         .catch(function(error) {
-          console.log(error);
-        })
+          toastr.error(error, 'Error');
+        });
     }
 
     $scope.navigateToMovie = function(id) {
