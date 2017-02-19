@@ -2,7 +2,9 @@
   angular
     .module('app', [
       'ngRoute',
-      'movieSearchModule'
+      'ngAnimate',
+      'movieSearchModule',
+      'toastr'
     ])
     .config(routeConfig);
     

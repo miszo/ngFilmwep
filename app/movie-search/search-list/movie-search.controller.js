@@ -5,9 +5,14 @@
 
   movieSearchCtrl.$inject = ['$scope', '$location', 'movieSearchService'];
   function movieSearchCtrl($scope, $location, movieSearchService) {
-    $scope.movieTitle = 'star wars';
+    $scope.movieTitle = null;
     $scope.movieYear = null;
     $scope.movieList = [];
+
+    $scope.clearSearch = function() {
+      $scope.movieTitle = null;
+      $scope.movieYear = null;
+    }
 
     $scope.findMovie = function() {
       movieSearchService

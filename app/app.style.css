@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext';
-@import './css/_reset.css';
-@import './movie-search/movieSearchDirective/movie-search.directive.css';
+@import 'vendors/reset-css/reset.css';
+@import 'vendors/angular-toastr/angular-toastr.min.css';
+@import 'movie-search/movieSearchDirective/movie-search.directive.css';
 
 html {
   font-size: 62.5%;
@@ -38,7 +39,7 @@ button {
   padding: 5rem;
   text-align: center;
   background: #fff;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, .3)
 } 
 
 .filmwep__search-results {

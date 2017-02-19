@@ -3,12 +3,12 @@
   .module('movieSearchModule')
   .service('movieSearchService', movieSearchService);
 
-  movieSearchService.$inject = ['$http', '$q'];
-  function movieSearchService($http, $q) {
+  movieSearchService.$inject = ['$http', '$q', 'toastr'];
+  function movieSearchService($http, $q, toastr) {
     var baseUrl = 'http://www.omdbapi.com/';
     this.fetchMoviesList = function(movieTitle, movieYear) {
       if (!movieTitle || movieTitle.length === 0) {
-        return $q.reject('title not provided :(');
+        toastr.error('Title was not provided', 'Error');
       }
       var configObj = {
         params: {
@@ -23,7 +23,8 @@
     this.fetchMovieDetail = function(id) {
       var configObj = {
         params: {
-          i: id
+          i: id,
+          plot: 'full'
         }
       };
 

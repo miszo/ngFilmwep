@@ -1,4 +1,17 @@
 <a href="#!search">Go back to search</a>
 
-<h1>{{ movie.Title }}</h1>
+<h1>{{ movie.Title }} ({{ movie.Year }})</h1>
+<img ng-src="{{ movie.Poster }}" alt="{{ movie.Title }} ({{ movie.Year }})" width="100">
 <div>{{ movie.Actors }}</div>
+<div>{{ movie.Awards }}</div>
+<div>{{ movie.Country }}</div>
+<div ng-if="movie.Director != 'N/A'">{{ movie.Director }}</div>
+<div>{{ movie.Genre }}</div>
+<p>{{ movie.Plot }}</p>
+<div>{{ movie.Rated }}</div>
+<div>{{ movie.Released }}</div>
+<div>{{ movie.Runtime }}</div>
+
+<div>{{ movie.Writer }}</div>
+<a href="http://www.imdb.com/title/{{ movie.imdbID }}/" target="_blank">Check on IMDb</a>
+
